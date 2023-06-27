@@ -4,65 +4,100 @@
     <meta charset="UTF-8">
     <title>bi portfolio</title>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="https://github.com/bi-sz.png" type="image/png">
+    <link rel="icon" href="image/logo/liyo2.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 <body>
 
-<!-- 프로필 부분 -->
-<div id="profile-section">
-    <div class="profile-container">
-        <img src="https://github.com/bi-sz.png" alt="Profile picture" class="profile-picture">
-        <h2 class="profile-name">권 비</h2>
-        <p class="profile-username">@liyo</p>
-        <p class="profile-role">Full-Stack Developer</p>
-        <hr class="profile-separator">
-        <div class="profile-links">
-            <a href="https://github.com/bi-sz" class="link-icon"><img src="image/github_icon.png" alt="Velog"></i></a>
-            <a href="https://velog.io/@bi-sz" class="link-icon"><img src="image/velog_icon.png" alt="Velog"></a>
-            <a href="https://li-yo.tistory.com/" class="link-icon"><img src="image/tistory_icon.png" alt="Tistory"></a>
-            <a href="https://www.instagram.com/kwonbi_/" class="link-icon"><img src="image/insta_icon.png"></i></a>
+<!-- Header -->
+<div class="header">
+    <nav class="navbar container navbar-dark" style="background:white;">
+        <a class="navbar-brand" href="/">
+            <img src="image/logo/liyo.png" alt="로고 이미지" width="110px"/>
+        </a>
+        <div class="navbar-nav gap-2">
+            <a class="nav-link menu-a" href="/">Project</a>
+            <a class="nav-link menu-a" href="/">방명록</a>
+        </div>
+    </nav>
+</div>
+
+
+    <!-- 프로필 부분 -->
+    <div id="profile-section">
+        <div class="profile-container">
+            <img src="https://github.com/bi-sz.png" alt="Profile picture" class="profile-picture">
+            <h2 class="profile-name">권 비</h2>
+            <p class="profile-username">@liyo</p>
+            <p class="profile-role">Full-Stack Developer</p>
+            <hr class="profile-separator">
+            <div class="profile-links">
+                <a href="https://github.com/bi-sz" class="link-icon"><img src="image/icon/github.png" alt="Velog"></i></a>
+                <a href="https://velog.io/@bi-sz" class="link-icon"><img src="image/icon/velog.png" alt="Velog"></a>
+                <a href="https://li-yo.tistory.com" class="link-icon"><img src="image/icon/tistory.png" alt="Tistory"></a>
+                <a href="https://www.instagram.com/kwonbi_" class="link-icon"><img src="image/icon/insta.png"></a>
+                <a href="https://open.kakao.com/o/sGFzzbsf" class="link-icon"><img src="image/icon/email.png" alt="email"></a>
+                <a href="https://open.kakao.com/o/sGFzzbsf" class="link-icon"><img src="image/icon/kakao.png" alt="Kakao"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- Project 부분 -->
+    <div id="project-section">
+        <h1 class="title">Project</h1>
+
+        <div id="app" class="container">
+            <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Minty</h1>
+                <p slot="content">
+                    <br>
+                    중고거래 플랫폼 민티.
+                </p>
+            </card>
+            <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">ERP Groupware</h1>
+                <p slot="content">협업을 위해 필요한 다양한 비즈니스 기능을 하나의 플랫폼에서 지원하는 업무용 소프트웨어.</p>
+            </card>
+            <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Shop</h1>
+                <p slot="content">쇼핑몰 프로그램.
+                    <br>                                            <br>
+                </p>
+            </card>
+            <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Console Shop</h1>
+                <p slot="content">
+                    <br>
+                    콘솔 쇼핑몰 프로그램.
+                    <br>                                                <br>
+                </p>
+            </card>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <script src="js/index.js"></script>
+
+<div class="footer">
+    <div class="footer-content">
+        <div class="footer-top">
+            <p>liyo</p>
+            <p>문의 kwonbe99@gmail.com</p>
+        </div>
+        <div class="footer-links">
+            <a style="cursor:pointer;" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kwonber99@gmail.com" target="_blank">
+                <img class="footer-icon" src="image/icon/email.png" alt="email"/>
+            </a>
+            <a style="cursor:pointer;" href="https://open.kakao.com/o/sGFzzbsf">
+                <img class="footer-icon" src="image/icon/kakao.png" alt="Kakao"/>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 bi-sz. liyo.</p>
         </div>
     </div>
 </div>
-
-
-<div class="line"></div>
-
-<!-- Project 부분 -->
-<div id="project-section">
-    <h1 class="title">Project</h1>
-
-    <div id="app" class="container">
-        <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
-            <h1 slot="header">Minty</h1>
-            <p slot="content">
-                <br>
-                중고거래 플랫폼 민티.
-            </p>
-        </card>
-        <card data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-            <h1 slot="header">ERP Groupware</h1>
-            <p slot="content">협업을 위해 필요한 다양한 비즈니스 기능을 하나의 플랫폼에서 지원하는 업무용 소프트웨어.</p>
-        </card>
-        <card data-image="https://images.unsplash.com/photo-1479621051492-5a6f9bd9e51a?dpr=2&auto=compress,format&fit=crop&w=1199&h=811&q=80&cs=tinysrgb&crop=">
-            <h1 slot="header">Shop</h1>
-            <p slot="content">쇼핑몰 프로그램.
-                <br>                                            <br>
-            </p>
-        </card>
-        <card data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-            <h1 slot="header">Console Shop</h1>
-            <p slot="content">
-                <br>
-                콘솔 쇼핑몰 프로그램.
-                <br>                                            <br>
-            </p>
-        </card>
-    </div>
-</div>
-
-<script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
-<script src="js/index.js"></script>
-
 </body>
 </html>
