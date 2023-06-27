@@ -15,6 +15,61 @@ body {
   text-align: center;
 }
 
+#profile-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-container {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 32px;
+  width: 300px;
+  text-align: center;
+}
+
+.profile-picture {
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.profile-name {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+}
+
+.profile-username {
+  margin: 0 0 15px 0;
+  color: #777;
+}
+
+.profile-role {
+  margin: 0 0 24px 0;
+  color: #696969;
+  font-size: 14px;
+}
+
+.profile-separator {
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 24px;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.link-icon img {
+  width: 24px;
+  height: 24px;
+}
+
 #project-section .title {
   font-family: "Raleway";
   font-size: 24px;
@@ -146,6 +201,7 @@ body {
 .line {
   flex-basis: 100%;
   border-bottom: 1px solid black;
+  margin-top: 50px;
   margin-bottom: 30px;
   margin-left: 5%;
   margin-right: 5%;
