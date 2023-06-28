@@ -1,4 +1,11 @@
-.header {
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,6 +16,7 @@
     z-index: 1;
     position: fixed;
     top: 0;
+    font-family: 'Dovemayo_gothic', sans-serif;
   }
   
   .navbar {
@@ -35,7 +43,7 @@
   .nav-link {
     text-decoration: none;
     color: black;
-    font-family: 'font', sans-serif;
+    font-family: 'Dovemayo_gothic', sans-serif;
     font-size: 22px;
     transition: color 0.3s;
   }
@@ -43,3 +51,4 @@
   .nav-link:hover {
     color: gray;
   }
+  

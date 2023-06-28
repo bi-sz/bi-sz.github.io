@@ -4,7 +4,7 @@ window.onload = function() {
 }
 
 function loadHeader() {
-    fetch('templates/fragments/header.html')
+    fetch('header.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('header').innerHTML = data;
@@ -12,7 +12,7 @@ function loadHeader() {
 }
 
 function loadFooter() {
-    fetch('templates/fragments/footer.html')
+    fetch('footer.html')
     .then(response => response.text())
     .then(data => {
         document.getElementById('footer').innerHTML = data;
