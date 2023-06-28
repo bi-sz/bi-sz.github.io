@@ -30,6 +30,7 @@ border-radius: 8px;
 padding: 32px;
 width: 300px;
 text-align: center;
+background-color: rgba(255, 255, 255, 0.4);
 }
 
 .profile-picture {
@@ -211,8 +212,6 @@ margin-right: 5%;
 }
 
 /* Skills Section */
-
-
 .Skills_tech-stacks-container__wPIVK {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -228,6 +227,7 @@ margin-right: 5%;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin: 10px; /* Add some margin between the tech stacks */
+  background-color:	#FFFFFF;
 }
 
 .Skills_title__TH2ju {
@@ -241,5 +241,3 @@ margin-right: 5%;
   height: auto;
   margin: 10px auto; /* Center the images and add some margin */
 }
-
-
