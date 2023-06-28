@@ -210,3 +210,36 @@ margin-left: 5%;
 margin-right: 5%;
 }
 
+/* Skills Section */
+
+
+.Skills_tech-stacks-container__wPIVK {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 10px; 
+  max-width: 1200px; 
+  margin: auto; 
+}
+
+.Skills_tech-stacks__f20f8 {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px; /* Add some margin between the tech stacks */
+}
+
+.Skills_title__TH2ju {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: 600; /* Make the title a bit bolder */
+}
+
+.Skills_img__f94MA {
+  max-width: 70px; /* Set a maximum width for the images */
+  height: auto;
+  margin: 10px auto; /* Center the images and add some margin */
+}
+
+
