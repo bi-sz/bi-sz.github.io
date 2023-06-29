@@ -45,6 +45,8 @@
 .Projects_project__hHhvb {
     margin-bottom: 40px; 
     font-family: 'Dovemayo_gothic', sans-serif; 
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .Projects_project__hHhvb {
@@ -53,6 +55,8 @@
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Dovemayo_gothic', sans-serif; 
+    overflow-x: auto;
+    overflow-y: auto;
 }
 
 /* 프로젝트 제목과 기간 스타일 */
@@ -83,6 +87,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: 'Dovemayo_gothic', sans-serif; 
+    word-break: break-word;
 }
 
 /* 이미지 슬라이드 및 네비게이션 스타일 */
@@ -108,7 +113,7 @@
 .Projects_descriptions__2g3bi {
     flex: 2;
     font-family: 'Dovemayo_gothic', sans-serif; 
-    
+    word-break: break-word;
 }
 
 /* 프로젝트 내부의 각 항목들에 대한 스타일 */
