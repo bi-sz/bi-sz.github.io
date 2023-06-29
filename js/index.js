@@ -6,6 +6,7 @@ Vue.config.devtools = true;
                     @mousemove="handleMouseMove"
                     @mouseenter="handleMouseEnter"
                     @mouseleave="handleMouseLeave"
+                    @click="handleClick"
                     ref="card">
                     <div class="card"
                         :style="cardStyle">
@@ -20,7 +21,7 @@ Vue.config.devtools = true;
                 this.width = this.$refs.card.offsetWidth;
                 this.height = this.$refs.card.offsetHeight;
             },
-            props: ['dataImage'],
+            props: ['dataImage', 'dataId'],
             data() {
                 return {
                     width: 0,
@@ -70,6 +71,9 @@ Vue.config.devtools = true;
                         this.mouseX = 0;
                         this.mouseY = 0;
                     }, 1000);
+                },
+                handleClick() {
+                    window.location.href = `project.html#${this.dataId}`;
                 }
             }
         });
@@ -77,3 +81,6 @@ Vue.config.devtools = true;
         const app = new Vue({
             el: '#app'
         });
+
+
+        

@@ -8,36 +8,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <script srt="js/header.js"></script>
     <script src="js/layout.js"></script>
+    <script src="js/up.js"></script>
 </head>
 <body>
     <div id="header"></div>
 
-    <!-- 프로필 부분 -->
+    <!-- Profile 부분 -->
     <div id="profile-section">
-        <div class="profile-container">
-            <img src="https://github.com/bi-sz.png" alt="Profile picture" class="profile-picture">
-            <h2 class="profile-name">권 비</h2>
-            <p class="profile-username">@liyo</p>
-            <p class="profile-role">Full-Stack Developer</p>
-            <p class="profile-role">보완중 ..</p>
-            <hr class="profile-separator">
-            <div class="profile-links">
-                <a href="https://github.com/bi-sz" class="link-icon"><img src="image/icon/github.png" alt="Velog"></i></a>
-                <a href="https://velog.io/@bi-sz" class="link-icon"><img src="image/icon/velog.png" alt="Velog"></a>
-                <a href="https://li-yo.tistory.com" class="link-icon"><img src="image/icon/tistory.png" alt="Tistory"></a>
-                <a href="https://www.instagram.com/kwonbi_" class="link-icon"><img src="image/icon/insta.png" alt="Insta"></a>
-                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kwonber99@gmail.com" class="link-icon" class="link-icon"><img src="image/icon/email.png" alt="Email"></a>
-                <a href="https://open.kakao.com/o/sGFzzbsf" class="link-icon"><img src="image/icon/kakao.png" alt="Kakao"></a>
+        <div>
+            <h1 class="title">Profile</h1>
+            <div class="profile-container">
+                <img src="https://github.com/bi-sz.png" alt="Profile picture" class="profile-picture">
+                <h2 class="profile-name">권 비</h2>
+                <p class="profile-username">@liyo</p>
+                <p class="profile-role">Full-Stack Developer</p>
+                <p class="profile-role">보완중 ..</p>
+                <hr class="profile-separator">
+                <div class="profile-links">
+                    <a href="https://github.com/bi-sz" class="link-icon"><img src="image/icon/github.png" alt="Velog"></i></a>
+                    <a href="https://velog.io/@bi-sz" class="link-icon"><img src="image/icon/velog.png" alt="Velog"></a>
+                    <a href="https://li-yo.tistory.com" class="link-icon"><img src="image/icon/tistory.png" alt="Tistory"></a>
+                    <a href="https://www.instagram.com/kwonbi_" class="link-icon"><img src="image/icon/insta.png" alt="Insta"></a>
+                    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=kwonber99@gmail.com" class="link-icon" class="link-icon"><img src="image/icon/email.png" alt="Email"></a>
+                    <a href="https://open.kakao.com/o/sGFzzbsf" class="link-icon"><img src="image/icon/kakao.png" alt="Kakao"></a>
+                </div>
             </div>
         </div>
     </div>
-
-    <div class="line"></div>
-
     <!-- skils 부분 -->
     <div id = "skills-section">
-        <h1 class="title">Skills</h1>
+        <div class="line"></div>
+        <div>
+            <h1 class="title">Skills</h1>
             <article class="Skills_Skills__NOlZH" id="skills">
             <div class="Skills_content__g0p1s">
                 <div class="Skills_tech-stacks-container__wPIVK">
@@ -69,7 +73,7 @@
                         <div class="Skills_title__TH2ju">Framework</div>
                         <img class="Skills_img__f94MA" src="image/skils/Framework/spring.png" alt="">
                         <img class="Skills_img__f94MA" src="image/skils/Framework/SpringBoot.png" alt="">
-                            <img class="Skills_img__f94MA" src="image/skils/Framework/flask.png" alt="">
+                        <img class="Skills_img__f94MA" src="image/skils/Framework/flask.png" alt="">
                         <img class="Skills_img__f94MA" src="image/skils/Framework/bootstrap.png" alt="">
                     </div>
                     <div class="Skills_tech-stacks__f20f8">
@@ -93,8 +97,8 @@
                         <img class="Skills_img__f94MA" src="image/skils/coummunication/StarUML.png" alt="">
                     </div>
                 </div>
-            </div>
-        </article>
+            </article>
+        </div>
     </div>
 
     <div class="line"></div>
@@ -104,24 +108,30 @@
         <h1 class="title">Project</h1>
 
         <div id="app" class="container">
-            <card data-image="image/project/Minty/MintyLogo.png">
+            <card data-image="image/project/Minty/MintyLogo.png" data-id="Minty">
                 <h1 slot="header">Minty</h1>
                 <p slot="content">
                     <br>
                     중고거래 플랫폼 민티.
                 </p>
             </card>
-            <card data-image="image/project/ERPGroupware/RebootLogo.png">
+            <card data-image="image/project/ERPGroupware/RebootLogo.png" data-id="ERPGroupware">
                 <h1 slot="header">ERP Groupware</h1>
                 <p slot="content">협업을 위해 필요한 다양한 비즈니스 기능을 하나의 플랫폼에서 지원하는 업무용 소프트웨어.</p>
             </card>
-            <card data-image="image/project/Shop/ShopLogo.png">
+            <card data-image="image/project/Shop/ShopLogo.png" data-id="Shop">
                 <h1 slot="header">Shop</h1>
                 <p slot="content">쇼핑몰 프로그램.
                     <br>                                            <br>
                 </p>
             </card>
-            <card data-image="image/project/ConsoleShop/OdiumMallLogo.png">
+            <card data-image="image/project/IceAge/IceAgeLogo.png" data-id="IceAge">
+                <h1 slot="header">Ice Age</h1>
+                <p slot="content">MapleStoryWorld 게임 .
+                    <br>                                            <br>
+                </p>
+            </card>
+            <card data-image="image/project/ConsoleShop/OdiumMallLogo.png" data-id="ConsoleShop">
                 <h1 slot="header">Console Shop</h1>
                 <p slot="content">
                     <br>
@@ -129,8 +139,20 @@
                     <br>                                                <br>
                 </p>
             </card>
+            <card data-image="image/project/Portfolio/PortfolioLogo.png" data-id="Portfolio">
+                <h1 slot="header">liyo Portfolio</h1>
+                <p slot="content">
+                    <br>
+                    정적인 웹 페이지로 구성한 Portfolio.
+                    <br>                                                <br>
+                </p>
+            </card>
         </div>
     </div>
+
+    <a id="scrollToTopBtn" onclick="scrollToTop()" title="Scroll to Top">
+        <img src="image/icon/up.png" alt="Scroll to Top">
+    </a>
 
     <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
     <script src="js/index.js"></script>

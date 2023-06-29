@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'CustomFont';
     src: url('fonts/BMJUA_ttf.ttf') format('truetype');
-  }
+}
   
-  html, body, button {
-    font-family: 'CustomFont', Arial, sans-serif;
-  }
+html, body, button {  
+    font-family: 'CustomFont', Arial, sans-serif; 
+}
 
-  body {
+body {
     background-color: #FCE9F1;
 
-    }
+}
 
 button{border:0;margin:0;padding:0;}
 
