@@ -55,7 +55,7 @@
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Dovemayo_gothic', sans-serif; 
-    overflow-x: auto;
+    overflow-x: auto; 
     overflow-y: auto;
 }
 
@@ -78,7 +78,7 @@
     color: #808080; 
     text-align: center;
     font-family: 'Dovemayo_gothic', sans-serif; 
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* 이미지와 설명을 가로로 배치하기 위한 스타일 */
