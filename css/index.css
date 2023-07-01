@@ -9,6 +9,14 @@ margin: 0;
   padding-bottom: 0;
 }
 
+.visitor-counter img {
+  position: absolute;
+  right: 5%;
+  top: 12%;  
+  width: 150px;  
+  height: auto; 
+}
+
 .title {
 font-family: "Raleway";
 font-size: 24px;
