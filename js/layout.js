@@ -2,7 +2,6 @@ window.onload = function() {
     loadHeader();
     loadFooter();
     loadHeader2();
-    loadHeader3();
 }
 
 function loadHeader() {
@@ -26,14 +25,6 @@ function loadHeader2() {
     .then(response => response.text())
     .then(data => {
         document.getElementById('header2').innerHTML = data;
-    });
-}
-
-function loadHeader3() {
-    fetch('projectHeader.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('header3').innerHTML = data;
     });
 }
 

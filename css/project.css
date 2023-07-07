@@ -105,8 +105,22 @@
     font-family: 'Dovemayo_gothic', sans-serif; 
 }
 
+/* 각 이미지는 기본적으로 숨겨져 있음 */
+.Projects_img-wrapper__0b8Tt {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
 .Projects_img__OAyqd {
-    width: 300px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 /* 프로젝트 설명 스타일 */
@@ -142,4 +156,29 @@
 
 .Projects_red__r_DWh {
     color: 	#FF1493;
+}
+
+/* 이미지 아이콘 크기 조정 */
+.Projects_prev__wS3_z img,
+.Projects_next__3RYWe img {
+    width: 30px;
+    height: 30px;
+}
+
+/* 페이지 표시 스타일 */
+.Projects_page__zHIqO {
+    font-size: 20px; /* 폰트 크기를 더 크게 조정 */
+    font-weight: bold; /* 폰트를 굵게 설정 */
+    margin: 0 20px; /* 좌우 마진을 추가하여 좌우 네비게이션 버튼과의 간격을 조정 */
+}
+
+/* 좌우 네비게이션 위치 조정 */
+.Projects_prev__wS3_z,
+.Projects_next__3RYWe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer; /* 버튼 위로 마우스를 올리면 손가락 커서가 나타나도록 설정 */
 }
