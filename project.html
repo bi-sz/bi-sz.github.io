@@ -109,7 +109,8 @@
                                 앞으로도 <span class="Projects_red__r_DWh">React</span>와 같은 최신 프레임워크와
                                 <span class="Projects_red__r_DWh">API</span>를 적극 활용하여, 효과적이고 최신 기술 기반의 프로젝트를 구축하겠습니다.
                                 <p></p>
-                                <!-- div class="Projects_show-readme-btn__v1p__">자세히 보기 ▶ README</div-->
+                                <button class="minty-btn">자세히 보기 ▶</button>
+
                             </div>
 
                             <div class="line"></div>
@@ -576,6 +577,15 @@
     <div id="footer"></div>
     <script src="js/header3.js"></script>
     <script src="js/slider.js"></script>
+
+    <script>
+        const button = document.querySelector('.minty-btn');
+
+        button.addEventListener('click', function() {
+        window.location.href = '/minty.html';
+    });
+
+    </script>
 </body>
 
 </html>

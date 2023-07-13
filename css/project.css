@@ -182,3 +182,9 @@
     height: 30px;
     cursor: pointer; /* 버튼 위로 마우스를 올리면 손가락 커서가 나타나도록 설정 */
 }
+
+button.minty-btn {
+    font-weight: bold;
+    font-size: 1.2em; /* 원하는 크기로 조정해주세요 */
+  }
+

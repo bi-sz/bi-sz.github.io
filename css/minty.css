@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Projects_Projects__E9SvD {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#text1{
+    font-family: 'Dovemayo_gothic', sans-serif;
+}
+
+.card-title{
+    font-family: 'Dovemayo_gothic', sans-serif;
+}
+
+body {
+    background-color: #bbf2f9 !important; 
+}
