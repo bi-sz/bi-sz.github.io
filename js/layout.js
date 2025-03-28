@@ -1,7 +1,16 @@
 window.onload = function() {
-    loadHeader();
+    // header 요소가 존재할 때만 loadHeader2 호출
+    const headerElement = document.getElementById('header');
+    if (headerElement) {
+        loadHeader();
+    }
     loadFooter();
-    loadHeader2();
+    
+    // header2 요소가 존재할 때만 loadHeader2 호출
+    const header2Element = document.getElementById('header2');
+    if (header2Element) {
+        loadHeader2();
+    }
 }
 
 function loadHeader() {
@@ -27,4 +36,3 @@ function loadHeader2() {
         document.getElementById('header2').innerHTML = data;
     });
 }
-

@@ -298,3 +298,15 @@ li {
   margin: 5px 0; /* 아이템 간의 여백 */
   color: #333; /* 리스트 아이템 색상 */
 }
+
+.career-title {
+  cursor: pointer; /* 마우스 포인터를 손가락 모양으로 변경 */
+  text-decoration: none; /* 기본 밑줄 제거 */
+  color: #5D4037; /* 텍스트 색상 */
+  transition: color 0.3s, text-decoration 0.3s; /* 부드러운 전환 효과 */
+}
+
+.career-title:hover {
+  text-decoration: underline; /* 마우스 오버 시 밑줄 추가 */
+  color: #BF360C; /* 마우스 오버 시 색상 변경 */
+}
