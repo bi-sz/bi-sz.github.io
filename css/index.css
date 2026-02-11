@@ -328,7 +328,7 @@ justify-content: space-around;
 .career-title {
   font-size: 18px;
   font-weight: 600;
-  margin: 28px 0 10px 0;
+  margin: 16px 0 8px 0; /* 위 16px, 아래 8px로 축소 */
   color: #5D4037;
 }
 
