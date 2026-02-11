@@ -1,10 +1,10 @@
 body {
-font-family: "Raleway";
-font-size: 14px;
-font-weight: 500;
-background-color: #e6f5ff;
--webkit-font-smoothing: antialiased;
-margin: 0;
+  font-family: "Raleway";
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #e6f5ff;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -12,246 +12,404 @@ margin: 0;
 .visitor-counter img {
   position: absolute;
   right: 5%;
-  top: 12%;  
-  width: 150px;  
-  height: auto; 
+  top: 12%;
+  width: 150px;
+  height: auto;
 }
 
 .title {
-font-family: "Raleway";
-font-size: 24px;
-font-weight: 700;
-color: #5D4037;
-text-align: center;
+  font-family: "Raleway";
+  font-size: 24px;
+  font-weight: 700;
+  color: #5D4037;
+  text-align: center;
 }
 
+/* =========================
+   PROFILE SECTION
+========================= */
 
 #profile-section {
-margin-top: 70px;
-display: flex;
-justify-content: center;
-align-items: center;
+  margin: 60px 16px 0 16px;
+  display: flex;
+  justify-content: center;
 }
 
 .profile-container {
-border: 1px solid #e0e0e0;
-border-radius: 8px;
-padding: 32px;
-width: 300px;
-text-align: center;
-background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 36px;
+  width: 90%;
+  max-width: 500px;   /* PC 최대 너비 */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 .profile-picture {
-width: 60%;
-height: auto;
-border-radius: 50%;
-object-fit: cover;
-margin-bottom: 24px;
+  width: 55%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
 }
 
 .profile-name {
-margin: 0 0 5px 0;
-font-size: 18px;
+  margin: 0 0 5px 0;
+  font-size: 20px;
 }
 
 .profile-username {
-margin: 0 0 15px 0;
-color: #777;
+  margin: 0 0 15px 0;
+  color: #777;
 }
 
 .profile-role {
-margin: 0 0 24px 0;
-color: #696969;
-font-size: 14px;
+  margin: 0 0 20px 0;
+  color: #696969;
+  font-size: 14px;
+}
+
+.profile-description {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.profile-description-sub {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 24px;
 }
 
 .profile-separator {
-border: 0;
-height: 1px;
-background-color: #e0e0e0;
-margin-bottom: 24px;
+  border: 0;
+  height: 1px;
+  background-color: #e0e0e0;
+  margin-bottom: 24px;
 }
 
 .profile-links {
-display: flex;
-justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .link-icon img {
-width: 24px;
-height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
-#project-section .title {
-font-family: "Raleway";
-font-size: 24px;
-font-weight: 700;
-color: #5D4037;
-text-align: center;
+/* 모바일 최적화 */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 24px;
+  }
+
+  .profile-description {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   PROJECT SECTION
+========================= */
+
+#project-section {
+  text-align: center;
 }
 
 #project-section .container {
-padding: 40px 80px;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+  width: 100%;
+  max-width: 900px;   /* ← 너무 넓지 않게 제한 */
+  margin: 0 auto;
+  padding: 60px 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 240px); /* 카드 크기랑 동일 */
+  justify-content: center;  /* 가운데 정렬 */
+  gap: 25px;  /* 간격 줄임 */
 }
 
+/* 카드 래퍼 */
 #project-section .card-wrap {
-margin: 10px;
-transform: perspective(800px);
-transform-style: preserve-3d;
-cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  cursor: pointer;
 }
+
+/* =========================
+   기존 카드 스타일 유지
+========================= */
 
 #project-section .card-wrap:hover .card-info {
-transform: translateY(0);
+  transform: translateY(0);
 }
 
 #project-section .card-wrap:hover .card-info p {
-opacity: 1;
+  opacity: 1;
 }
 
 #project-section .card-wrap:hover .card-info,
 #project-section .card-wrap:hover .card-info p {
-transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 #project-section .card-wrap:hover .card-info:after {
-transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
-opacity: 1;
-transform: translateY(0);
+  transition: 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #project-section .card-wrap:hover .card-bg {
-transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
-opacity: 0.8;
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              opacity 5s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.8;
 }
 
 #project-section .card-wrap:hover .card {
-transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
-box-shadow: rgba(255, 255, 255, 0.2) 0 0 40px 5px, rgba(255, 255, 255, 1) 0 0 0 1px, rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset white 0 0 0 6px;
+  transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 2s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow:
+    rgba(255, 255, 255, 0.2) 0 0 40px 5px,
+    rgba(255, 255, 255, 1) 0 0 0 1px,
+    rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset white 0 0 0 6px;
 }
 
+/* 카드 */
 #project-section .card {
-position: relative;
-flex: 0 0 240px;
-width: 240px;
-height: 320px;
-background-color: #333;
-overflow: hidden;
-border-radius: 10px;
-box-shadow: rgba(0, 0, 0, 0.66) 0 30px 60px 0, inset #333 0 0 0 5px, inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
-transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  position: relative;
+  width: 240px;
+  height: 320px;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow:
+    rgba(0, 0, 0, 0.66) 0 30px 60px 0,
+    inset #333 0 0 0 5px,
+    inset rgba(255, 255, 255, 0.5) 0 0 0 6px;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 #project-section .card-bg {
-opacity: 0.5;
-position: absolute;
-top: -20px;
-left: -20px;
-width: 100%;
-height: 100%;
-padding: 20px;
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-pointer-events: none;
+  opacity: 0.5;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95),
+              opacity 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  pointer-events: none;
 }
 
 #project-section .card-info {
-padding: 20px;
-position: absolute;
-bottom: 0;
-color: #fff;
-transform: translateY(40%);
-transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  transform: translateY(40%);
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 #project-section .card-info p {
-opacity: 0;
-text-shadow: rgba(0, 0, 0, 1) 0 2px 3px;
-transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  opacity: 0;
+  text-shadow: rgba(0, 0, 0, 1) 0 2px 3px;
+  transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 #project-section .card-info * {
-position: relative;
-z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 #project-section .card-info:after {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-z-index: 0;
-width: 100%;
-height: 100%;
-background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.6) 100%);
-background-blend-mode: overlay;
-opacity: 0;
-transform: translateY(100%);
-transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 5s 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 #project-section .card-info h1 {
-font-family: "Playfair Display";
-font-size: 36px;
-font-weight: 700;
-text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
+  font-family: "Playfair Display";
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px;
 }
 
-#project-section .line {
-flex-basis: 100%;
-border-bottom: 1px solid black;
-margin-bottom: 30px;
-margin-left: 5%;
-margin-right: 5%;
-}
-
+/* 구분선 */
 .line {
-flex-basis: 100%;
-border-bottom: 1px solid black;
-margin-top: 50px;
-margin-bottom: 30px;
-margin-left: 5%;
-margin-right: 5%;
+  border-bottom: 1px solid black;
+  margin: 50px 5% 30px 5%;
 }
 
-/* Skills Section */
-
+/* =========================
+   SKILLS SECTION (중앙정렬 개선)
+========================= */
 
 .Skills_tech-stacks-container__wPIVK {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
-  padding: 10px; 
-  max-width: 1200px; 
-  margin: auto; 
+  grid-template-columns: repeat(4, 220px); /* 항상 4칸 */
+  justify-content: center;  /* 가운데 정렬 */
+  gap: 30px;
+  padding: 20px;
 }
 
 .Skills_tech-stacks__f20f8 {
   text-align: center;
   padding: 20px;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 10px; /* Add some margin between the tech stacks */
-  background-color:	#FFFFFF;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .Skills_title__TH2ju {
-  font-size: 1.2em;
-  margin-bottom: 10px;
-  font-weight: 600; /* Make the title a bit bolder */
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .Skills_img__f94MA {
-  max-width: 70px; /* Set a maximum width for the images */
+  max-width: 60px;
   height: auto;
-  margin: 10px auto; /* Center the images and add some margin */
+  margin: 10px;
 }
+
+/* 태블릿 */
+@media (max-width: 1100px) {
+  .Skills_tech-stacks-container__wPIVK {
+    grid-template-columns: repeat(2, 220px);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+  .Skills_tech-stacks-container__wPIVK {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   CAREER SECTION
+========================= */
+
+#career-section {
+  margin: 80px 16px 0 16px;
+  text-align: center; /* 섹션 제목 중앙 */
+}
+
+/* 메인 박스 */
+.career-container {
+  width: 100%;
+  max-width: 820px;            /* PC에서 너무 넓지 않게 */
+  margin: 30px auto;
+  padding: 28px 32px;
+
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #e8e8e8;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+
+  text-align: center;          /* 기본 중앙 */
+  line-height: 1.75;
+}
+
+/* 프로젝트 제목 */
+.career-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 28px 0 10px 0;
+  color: #5D4037;
+}
+
+/* 첫 제목 위 여백 제거 */
+.career-title:first-of-type {
+  margin-top: 0;
+}
+
+/* 기간 / Tech Stack */
+.career-container p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 리스트 중앙 블록 + 내부는 왼쪽 정렬 */
+.career-container ul {
+  display: inline-block;
+  text-align: left;
+  margin: 14px 0 22px 0;
+  padding-left: 20px;
+}
+
+.career-container li {
+  font-size: 14px;
+  margin: 6px 0;
+  color: #333;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+  .career-container {
+    max-width: 90%;
+    padding: 24px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  #career-section {
+    margin-top: 60px;
+  }
+
+  .career-container {
+    max-width: 95%;
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .career-title {
+    font-size: 16px;
+  }
+
+  .career-container p,
+  .career-container li {
+    font-size: 13px;
+  }
+}
+
+/* =========================
+   SCROLL BUTTON
+========================= */
 
 #scrollToTopBtn {
   display: none;
@@ -267,46 +425,4 @@ margin-right: 5%;
 
 #scrollToTopBtn.show {
   display: block;
-}
-
-.career-container {
-  padding: 20px;
-  background-color: #f9f9f9; /* 배경색 */
-  border: 1px solid #ccc; /* 테두리 */
-  margin: 20px auto; /* 위아래 여백 및 중앙 정렬 */
-  border-radius: 12px; /* 모서리 둥글게 */
-  width: 80%; /* 가로 너비를 90%로 설정하여 반응형으로 만듭니다 */
-  max-width: 1200px; /* 최대 너비 설정 */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
-}
-
-#project-portfolio .title {
-  font-family: "Raleway";
-  font-size: 24px;
-  font-weight: 700;
-  color: #5D4037;
-  text-align: center;
-  }
-
-ul {
-  margin: 5px 0 15px 20px; /* 리스트 여백 */
-  list-style-type: disc; /* 리스트 스타일 */
-}
-
-li {
-  font-size: 16px; /* 리스트 아이템 크기 */
-  margin: 5px 0; /* 아이템 간의 여백 */
-  color: #333; /* 리스트 아이템 색상 */
-}
-
-.career-title {
-  cursor: pointer; /* 마우스 포인터를 손가락 모양으로 변경 */
-  text-decoration: none; /* 기본 밑줄 제거 */
-  color: #5D4037; /* 텍스트 색상 */
-  transition: color 0.3s, text-decoration 0.3s; /* 부드러운 전환 효과 */
-}
-
-.career-title:hover {
-  text-decoration: underline; /* 마우스 오버 시 밑줄 추가 */
-  color: #BF360C; /* 마우스 오버 시 색상 변경 */
 }

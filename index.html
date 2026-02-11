@@ -23,7 +23,8 @@
                 <img src="https://github.com/bi-sz.png" alt="Profile picture" class="profile-picture">
                 <h2 class="profile-name">권 비</h2>
                 <p class="profile-username">@liyo</p>
-                <p class="profile-role">Full-Stack Developer</p>
+                <p class="profile-role">Java Backend Developer (2년 8개월)</p>
+
                 <hr class="profile-separator">
                 <div class="profile-links">
                     <a href="https://github.com/bi-sz" class="link-icon"><img src="image/icon/github.png" alt="Velog"></i></a>
@@ -49,7 +50,8 @@
             <article class="Skills_Skills__NOlZH" id="skills">
                 <div class="Skills_content__g0p1s">
                     <div class="Skills_tech-stacks-container__wPIVK">
-                        <div class="Skills_tech-stacks__f20f8">
+                        <!-- 2026.02.11 이전-->
+                        <!-- <div class="Skills_tech-stacks__f20f8">
                             <div class="Skills_title__TH2ju">Frontend</div>
                             <img class="Skills_img__f94MA" src="image/skils/Front-end/html.png" alt="HTML">
                             <img class="Skills_img__f94MA" src="image/skils/Front-end/css.png" alt="CSS">
@@ -88,6 +90,38 @@
                             <img class="Skills_img__f94MA" src="image/skils/Version-Control/github.png" alt="GitHub">
                             <img class="Skills_img__f94MA" src="image/skils/Version-Control/gitlab.png" alt="GitLab">
                             <img class="Skills_img__f94MA" src="image/skils/Version-Control/git.png" alt="Git">
+                        </div> -->
+                        <!-- 2026.02.11 수정-->
+                         <div class="Skills_tech-stacks__f20f8">
+                            <div class="Skills_title__TH2ju">Backend</div>
+                            <img class="Skills_img__f94MA" src="image/skils/Back-end/java.png" alt="Java">
+                            <img class="Skills_img__f94MA" src="image/skils/Back-end/spring.png" alt="Spring">
+                            <img class="Skills_img__f94MA" src="image/skils/Back-end/SpringBoot.png" alt="SpringBoot">
+                            <img class="Skills_img__f94MA" src="image/skils/Back-end/egovframe.png" alt="eGovFrame">
+                            <img class="Skills_img__f94MA" src="image/skils/Back-end/mqtt.png" alt="MQTT">
+                        </div>
+
+                        <div class="Skills_tech-stacks__f20f8">
+                            <div class="Skills_title__TH2ju">Database</div>
+                            <img class="Skills_img__f94MA" src="image/skils/DataBase/mssql.png" alt="MS SQL Server">
+                            <img class="Skills_img__f94MA" src="image/skils/DataBase/mysql.png" alt="MySQL">
+                            <img class="Skills_img__f94MA" src="image/skils/DataBase/maria.png" alt="Maria">
+                            <img class="Skills_img__f94MA" src="image/skils/DataBase/oracle.png" alt="Oracle">
+                            <img class="Skills_img__f94MA" src="image/skils/DataBase/InfluxDB.png" alt="InfluxDB">
+                        </div>
+
+                        <div class="Skills_tech-stacks__f20f8">
+                            <div class="Skills_title__TH2ju">Infra & DevOps</div>
+                            <img class="Skills_img__f94MA" src="image/skils/DevelopmentTools/Docker.png" alt="Docker">
+                            <img class="Skills_img__f94MA" src="image/skils/DevelopmentTools/Jenkins.png" alt="Jenkins">
+                            <img class="Skills_img__f94MA" src="image/skils/DevelopmentTools/keyclock.png" alt="Keycloak">
+                            <img class="Skills_img__f94MA" src="image/skils/DevelopmentTools/springcloudgateway.png" alt="Spring Cloud Gateway">
+                        </div>
+
+                        <div class="Skills_tech-stacks__f20f8">
+                            <div class="Skills_title__TH2ju">Frontend</div>
+                            <img class="Skills_img__f94MA" src="image/skils/Front-end/vue.png" alt="Vue.js">
+                            <img class="Skills_img__f94MA" src="image/skils/Front-end/react.png" alt="React">
                         </div>
                     </div>
                 </article>
@@ -98,53 +132,90 @@
 
     <!-- Career 부분 -->
     <div id="career-section">
-        <h1 class="title">Career</h1>
+        <h1 class="title">💼 주요 프로젝트 경험 </h1>
         <div class="career-container">
-            <h2 id="career1" class="career-title">1. 전기차 충전 인프라 통합관제 웹페이지 및 API 백엔드 개발</h2>
-            <ul>
-                <li>전자정부 프레임워크(eGovFrame3.9) 기반으로 Java 및 Spring Boot를 사용하여 데이터 전송 최적화 및 실시간 모니터링 기능 API 개발.</li>
-                <li>Redis를 활용하여 실시간 데이터 저장 및 관리.</li>
-            </ul>
+            <div class="career-wrapper">
+                <h2 class="career-title">1. 전기차 충전 인프라 통합관제 시스템 구축 및 고도화 (eBAB)</h2>
+                <p><strong>기간:</strong> 2023.07.24 ~ 2025.12.23</p>
+                <p><strong>Tech Stack:</strong> Java, Spring Boot, eGovFrame, Redis, MSSQL</p>
+                <ul>
+                    <li>충전기 상태 모니터링 REST API 설계 및 구현</li>
+                    <li>실시간 충전기 상태 데이터 저장 구조 설계</li>
+                    <li>Redis 기반 상태 캐싱 적용 및 조회 성능 개선</li>
+                    <li>관리자/운영자 권한 분리 및 API 보안 처리</li>
+                    <li>대용량 충전기 상태 데이터 처리 구조 개선</li>
+                    <li>시스템 기능 개선 및 성능 고도화 수행</li>
+                </ul>
 
-            <h2 id="career2" class="career-title">2. GS인증 1등급 인증 시험 합격 (2023.08 ~ 2024.01)</h2>
-            <ul>
-                <li>GS인증 기준에 맞춰 시스템 아키텍처 설계 및 문서화 작업 진행.</li>
-            </ul>
+                <h2 class="career-title">2. GS인증 1등급 획득 (총 2건)</h2>
+                <p><strong>① EBAB 충전인프라시스템 V1.0.0</strong> (2023.09.25 ~ 2024.01.22)</p>
+                <p><strong>② 커넥티드 통합관제시스템 V1.0</strong> (2025.09.29 ~ 2025.11.04)</p>
+                <ul>
+                    <li>GS 인증 기준 기반 아키텍처 개선</li>
+                    <li>API 응답 표준화 및 예외 처리 체계 정비</li>
+                    <li>기능 결함 항목 수정 및 재검증 대응</li>
+                    <li>보안 취약점 점검 및 개선</li>
+                    <li>코드 리팩토링 및 구조 안정화 수행</li>
+                </ul>
 
-            <h2 id="career3" class="career-title">3. 환경부/서울시 연계 API 개발</h2>
-            <ul>
-                <li>Spring Boot 기반으로 RESTful API 설계 및 구현.</li>
-                <li>외부 서비스와의 통합 및 데이터 처리 최적화.</li>
-            </ul>
+                <h2 class="career-title">3. 환경부 / 서울시 전기차 충전 인프라 통합 연계 개발</h2>
+                <p><strong>기간:</strong> 2023.12.12 ~ 2025.07.18</p>
+                <p><strong>Tech Stack:</strong> Spring Boot, REST API</p>
+                <ul>
+                    <li>공공 Open API 연계 모듈 설계 및 구현</li>
+                    <li>JSON ↔ 내부 DTO 매핑 구조 설계</li>
+                    <li>외부 API 장애 대응 및 재시도 로직 구현</li>
+                    <li>데이터 검증 및 변환 처리 로직 구현</li>
+                    <li>공공기관 연계 규격 대응 및 표준 준수</li>
+                </ul>
 
-            <h2 id="career4 "class="career-title">4. 컨넥티드 차량 관제 웹페이지 및 API 백엔드 개발</h2>
-            <ul>
-                <li>IoT 기술 활용 Dtg 단말기를 통한 차량 센싱 정보 NoSQL InfluxDB 처리.</li>
-                <li>MQTT 통신을 통해 어라운드뷰 및 공기청정기 센싱 정보를 실시간으로 전송하는 시스템 구축.</li>
-                <li>마이크로서비스 아키텍처를 기반으로 Docker를 사용하여 서비스 관리.</li>
-                <li>서비스 디스커버리 및 부하 분산을 위해 Eureka 및 Spring Cloud Gateway 사용.</li>
-                <li>Keycloak을 사용하여 사용자 인증 및 권한 관리를 통한 보안 처리.</li>
-                <li>데이터 시각화를 위해 Vue.js를 활용한 웹 인터페이스 개발.</li>
-            </ul>
+                <h2 class="career-title">4. 커넥티드 차량 관제 시스템 개발 </h2>
+                <p><strong>기간:</strong> 2024.04.01 ~ 2026.01.31</p>
+                <p><strong>Tech Stack:</strong> Spring Boot, MQTT, InfluxDB, Docker, MSA, Keycloak</p>
+                <ul>
+                    <li>DTG 단말기 센싱 데이터 수신 및 실시간 처리</li>
+                    <li>MQTT 기반 데이터 수집 파이프라인 구축</li>
+                    <li>InfluxDB 기반 시계열 데이터 분석 및 조회 API 개발</li>
+                    <li>Eureka / Gateway 기반 MSA 환경 구성</li>
+                    <li>Keycloak 기반 인증 및 권한 관리 설계</li>
+                    <li>컨테이너 기반 서비스 운영 및 배포 관리</li>
+                </ul>
 
-            <h2 id="career5" class="career-title">5. 외주업체 관리 프로젝트 개발</h2>
-            <ul>
-                <li>전자정부 프레임워크(eGovFrame3.9) 기반으로 AS, 콜센터, 회원 카드 발송 관리 시스템을 기획 및 개발하여 외주 관리 프로세스를 간소화.</li>
-                <li>우체국 API 연동을 통해 배송 상태를 자동으로 조회하고 현황을 표시하여 운영 효율성 향상.</li>
-            </ul>
+                <h2 class="career-title">5. 외주업체 관리 및 회원카드 발급 시스템 개발</h2>
+                <p><strong>기간:</strong> 2023.12.13 ~ 2024.03.25</p>
+                <p><strong>Tech Stack:</strong> Java, eGovFrame, MSSQL</p>
+                <ul>
+                    <li>AS / 콜센터 / 카드 발송 관리 시스템 설계 및 구현</li>
+                    <li>우체국 API 연동을 통한 배송 자동 조회 기능 개발</li>
+                    <li>외주 관리 프로세스 자동화 로직 구현</li>
+                </ul>
 
-            <h2 id="career6" class="career-title">6. 지붕 접속 방식의 전기버스 접속부 이송형 자동충전 시스템 개발 및 실증 (2023.09 ~ 2023.12)</h2>
-            <ul>
-                <li>국가 R&D 과제(1415187970)로 전자정부 프레임워크(eGovFrame3.9) 기반으로 제어 및 통신 시스템 개발.</li>
-            </ul>
+                <h2 class="career-title">6. 국가 R&D 과제 참여</h2>
+                <ul>
+                    <li><strong>전기버스 자동충전 시스템 개발 및 실증</strong> (산업통상자원부)<br>
+                        - 전자정부 프레임워크 기반 제어·통신 시스템 개발<br>
+                        - 충전 인프라 제어 API 개발 참여
+                    </li>
+                    <br>
+                    <li><strong>전기차 재사용 배터리 기반 MWh급 ESS 개발</strong> (중소벤처기업부)<br>
+                        - AI 안전진단 기반 ESS 시스템 백엔드 개발 참여<br>
+                        - 데이터 처리 및 시스템 연계 로직 구현
+                    </li>
+                    <br>
+                    <li><strong>친환경 선박 충전 솔루션 개발</strong> (해양수산부 전주기 혁신기술개발사업)<br>
+                        - 충전 인프라 백엔드 시스템 개발 및 유지보수 수행
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+
 
     <div class="line"></div>
 
     <!-- Project 부분 -->
     <div id="project-section">
-        <h1 class="title">Project</h1>
+        <h1 class="title">개인 프로젝트</h1>
 
         <div id="app" class="container">
             <card data-image="image/project/Minty/MintyLogo.png" data-id="Minty">
