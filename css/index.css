@@ -29,72 +29,57 @@ body {
    PROFILE SECTION
 ========================= */
 
+
 #profile-section {
-  margin: 60px 16px 0 16px;
-  display: flex;
-  justify-content: center;
+margin-top: 70px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .profile-container {
-  border: 1px solid #e0e0e0;
-  border-radius: 16px;
-  padding: 36px;
-  width: 90%;
-  max-width: 500px;   /* PC 최대 너비 */
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+border: 1px solid #e0e0e0;
+border-radius: 8px;
+padding: 32px;
+width: 300px;
+text-align: center;
+background-color: rgba(255, 255, 255, 0.7);
 }
 
 .profile-picture {
-  width: 55%;
-  max-width: 180px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 24px;
+width: 60%;
+height: auto;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 24px;
 }
 
 .profile-name {
-  margin: 0 0 5px 0;
-  font-size: 20px;
+margin: 0 0 5px 0;
+font-size: 18px;
 }
 
 .profile-username {
-  margin: 0 0 15px 0;
-  color: #777;
+margin: 0 0 15px 0;
+color: #777;
 }
 
 .profile-role {
-  margin: 0 0 20px 0;
-  color: #696969;
-  font-size: 14px;
-}
-
-.profile-description {
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 6px;
-  line-height: 1.6;
-}
-
-.profile-description-sub {
-  font-size: 12px;
-  color: #777;
-  margin-bottom: 24px;
+margin: 0 0 24px 0;
+color: #696969;
+font-size: 14px;
 }
 
 .profile-separator {
-  border: 0;
-  height: 1px;
-  background-color: #e0e0e0;
-  margin-bottom: 24px;
+border: 0;
+height: 1px;
+background-color: #e0e0e0;
+margin-bottom: 24px;
 }
 
 .profile-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+display: flex;
+justify-content: space-around;
 }
 
 .link-icon img {
