@@ -236,6 +236,13 @@
 
     pileEl.addEventListener("click", drawCard);
     currentCardEl.addEventListener("click", rollbackLastDraw);
+    revealedGrid.addEventListener("click", function (event) {
+        const wrap = event.target.closest(".card-wrap");
+        if (!wrap || wrap !== revealedGrid.lastElementChild) {
+            return;
+        }
+        rollbackLastDraw();
+    });
     initBtn.addEventListener("click", fullReset);
 
     fullReset();
