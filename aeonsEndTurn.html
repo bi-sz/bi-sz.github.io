@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#0d1218">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="차례 순서">
     <title>에이언즈 엔드 · 차례 순서</title>
+    <link rel="manifest" href="aeonsEnd.webmanifest">
     <link rel="icon" href="image/logo/liyo2.png" type="image/png">
+    <link rel="apple-touch-icon" href="image/aeons/cover.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
@@ -15,6 +20,7 @@
 <body>
     <div class="app">
         <header class="app-header">
+            <a class="app-back" href="aeonsEnd.html" aria-label="메인으로">←</a>
             <div class="app-header__title">
                 <h1>차례 순서</h1>
                 <span class="app-header__sub">에이언즈 엔드 레거시</span>
@@ -50,6 +56,14 @@
         </footer>
 
         <p class="rotate-hint" aria-hidden="true">📱 가로로 돌리면 더 잘 보여요</p>
+
+        <aside class="install-banner" id="install-banner" hidden>
+            <p class="install-banner__text" id="install-banner-text"></p>
+            <div class="install-banner__actions">
+                <button type="button" class="install-banner__install" id="install-banner-install" hidden>앱으로 설치</button>
+                <button type="button" class="install-banner__close" id="install-banner-close">닫기</button>
+            </div>
+        </aside>
     </div>
 
     <script src="js/aeonsEndTurn.js"></script>

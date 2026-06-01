@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0a1218">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>생명력 트래커 · 에이언즈 엔드</title>
+    <link rel="manifest" href="aeonsEnd.webmanifest">
+    <link rel="icon" href="image/logo/liyo2.png" type="image/png">
+    <link rel="apple-touch-icon" href="image/aeons/cover.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/aeonsEndLife.css">
+</head>
+<body>
+    <div class="life-app">
+        <header class="life-header">
+            <a class="life-back" href="aeonsEnd.html" aria-label="메인으로">←</a>
+            <h1 class="life-header__title">생명력 트래커</h1>
+        </header>
+
+        <main class="life-main">
+            <section class="life-display" aria-label="생명력 표시">
+                <button type="button" class="life-card is-active" data-target="grave" id="card-grave">
+                    <span class="life-card__label">그레이브홀드</span>
+                    <div class="hp-tracker hp-tracker--grave">
+                        <img class="hp-tracker__img" src="image/aeons/graveHP.png" alt="">
+                        <span class="hp-digit hp-digit--tens" data-target="grave" data-place="tens">0</span>
+                        <span class="hp-digit hp-digit--ones" data-target="grave" data-place="ones">0</span>
+                    </div>
+                </button>
+
+                <button type="button" class="life-card" data-target="neme" id="card-neme">
+                    <span class="life-card__label">네메시스</span>
+                    <div class="hp-tracker hp-tracker--neme">
+                        <img class="hp-tracker__img" src="image/aeons/nemeHP.png" alt="">
+                        <span class="hp-digit hp-digit--tens" data-target="neme" data-place="tens">0</span>
+                        <span class="hp-digit hp-digit--ones" data-target="neme" data-place="ones">0</span>
+                    </div>
+                </button>
+            </section>
+
+            <section class="life-controls" aria-label="생명력 조절">
+                <p class="life-controls__label">
+                    <strong id="active-label">그레이브홀드</strong> 조절 중
+                </p>
+
+                <div class="life-controls__row">
+                    <button type="button" class="life-btn life-btn--minus" id="btn-minus" aria-label="생명력 1 감소">−</button>
+                    <input type="range" class="life-slider" id="hp-slider" min="0" max="99" value="0" aria-label="생명력 슬라이더">
+                    <button type="button" class="life-btn life-btn--plus" id="btn-plus" aria-label="생명력 1 증가">+</button>
+                </div>
+
+                <div class="life-quick">
+                    <button type="button" class="life-quick__btn life-quick__btn--edge" data-set="0">MIN</button>
+                    <button type="button" class="life-quick__btn" data-delta="-10">−10</button>
+                    <button type="button" class="life-quick__btn" data-delta="-5">−5</button>
+                    <button type="button" class="life-quick__btn" data-delta="5">+5</button>
+                    <button type="button" class="life-quick__btn" data-delta="10">+10</button>
+                    <button type="button" class="life-quick__btn life-quick__btn--edge" data-set="99">MAX</button>
+                </div>
+            </section>
+
+            <p class="life-hint">토큰 탭으로 선택 · ±1 · 슬라이더 · MIN/MAX</p>
+        </main>
+    </div>
+
+    <script src="js/aeonsEndLife.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+    "name": "에이언즈 엔드 · 차례 순서",
+    "short_name": "차례 순서",
+    "description": "에이언즈 엔드 레거시 차례 순서 덱",
+    "start_url": "/aeonsEndTurn.html",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#0d1218",
+    "theme_color": "#0d1218",
+    "icons": [
+        {
+            "src": "/image/aeons/cover.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/image/aeons/cover.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}

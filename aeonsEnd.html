@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0a1218">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="에이언즈 엔드">
+    <title>에이언즈 엔드 레거시</title>
+    <link rel="manifest" href="aeonsEnd.webmanifest">
+    <link rel="icon" href="image/logo/liyo2.png" type="image/png">
+    <link rel="apple-touch-icon" href="image/aeons/cover.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/aeonsEndMain.css">
+</head>
+<body>
+    <div class="main-app">
+        <div class="main-hero">
+            <img
+                class="main-hero__img"
+                src="image/aeons/main.webp"
+                alt="에이언즈 엔드 레거시"
+                width="1080"
+                height="720"
+                decoding="async"
+            >
+        </div>
+
+        <div class="main-body">
+            <div class="main-content">
+                <nav class="main-menu" aria-label="메인 메뉴">
+                    <a class="menu-card" href="aeonsEndTurn.html">
+                        <span class="menu-card__icon" aria-hidden="true">🎴</span>
+                        <span class="menu-card__text">
+                            <span class="menu-card__title">차례 순서</span>
+                            <span class="menu-card__desc">턴덱 셔플 · 뽑기 · 이력</span>
+                        </span>
+                        <span class="menu-card__arrow" aria-hidden="true">›</span>
+                    </a>
+
+                    <a class="menu-card" href="aeonsEndLife.html">
+                        <span class="menu-card__icon" aria-hidden="true">♥</span>
+                        <span class="menu-card__text">
+                            <span class="menu-card__title">생명력 트래커</span>
+                            <span class="menu-card__desc">그레이브홀드 · 네메시스</span>
+                        </span>
+                        <span class="menu-card__arrow" aria-hidden="true">›</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+
+        <aside class="install-banner" id="install-banner" hidden>
+            <p class="install-banner__text" id="install-banner-text"></p>
+            <div class="install-banner__actions">
+                <button type="button" class="install-banner__install" id="install-banner-install" hidden>앱으로 설치</button>
+                <button type="button" class="install-banner__close" id="install-banner-close">닫기</button>
+            </div>
+        </aside>
+    </div>
+
+    <script src="js/aeonsEndMain.js"></script>
+</body>
+</html>

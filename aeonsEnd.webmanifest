@@ -1,0 +1,25 @@
+{
+    "name": "에이언즈 엔드 레거시",
+    "short_name": "에이언즈 엔드",
+    "description": "에이언즈 엔드 레거시 보드게임 보조 앱",
+    "start_url": "/aeonsEnd.html",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#0a1218",
+    "theme_color": "#0a1218",
+    "icons": [
+        {
+            "src": "/image/aeons/cover.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "/image/aeons/cover.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ]
+}
