@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0d1218">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>에이언즈 엔드 · 차례 순서</title>
+    <link rel="icon" href="image/logo/liyo2.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/aeonsEndTurn.css">
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <div class="app-header__title">
+                <h1>차례 순서</h1>
+                <span class="app-header__sub">에이언즈 엔드 레거시</span>
+            </div>
+            <div class="status-bar">
+                <span>남은 카드 <strong id="remaining-count">6</strong>장</span>
+                <button type="button" class="btn-init" id="btn-init">초기화</button>
+            </div>
+        </header>
+
+        <main class="play-area">
+            <section class="deck-panel" aria-label="덱">
+                <div class="card-column">
+                    <div class="deck-slot" id="deck-slot">
+                        <button type="button" class="deck-pile" id="deck-pile" aria-label="카드 뽑기"></button>
+                    </div>
+                </div>
+                <p class="panel-hint" id="draw-hint">탭하여 뽑기</p>
+            </section>
+
+            <section class="revealed-panel" aria-label="공개된 카드">
+                <div class="card-column">
+                    <button type="button" class="current-card" id="current-card" aria-label="마지막 카드 취소 (롤백)"></button>
+                    <div class="revealed-grid" id="revealed-grid"></div>
+                    <p class="revealed-empty" id="revealed-empty">뽑은 카드가 여기에 표시됩니다</p>
+                </div>
+                <p class="panel-hint panel-hint--ghost" aria-hidden="true">탭하여 뽑기</p>
+            </section>
+        </main>
+
+        <footer class="history-bar" id="history-bar" aria-label="뽑은 순서">
+            <div class="history-strip" id="history-strip"></div>
+        </footer>
+
+        <p class="rotate-hint" aria-hidden="true">📱 가로로 돌리면 더 잘 보여요</p>
+    </div>
+
+    <script src="js/aeonsEndTurn.js"></script>
+</body>
+</html>
