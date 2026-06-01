@@ -10,13 +10,13 @@
     "theme_color": "#0a1218",
     "icons": [
         {
-            "src": "/image/aeons/cover.png",
+            "src": "/image/aeons/main3.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any"
         },
         {
-            "src": "/image/aeons/cover.png",
+            "src": "/image/aeons/main3.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any"

@@ -19,6 +19,14 @@
         nemesis: "image/aeons/neme2.jpg",
     };
 
+    function preloadCardImages() {
+        Object.keys(CARD_IMAGE_SRC).forEach(function (key) {
+            const img = new Image();
+            img.decoding = "async";
+            img.src = CARD_IMAGE_SRC[key];
+        });
+    }
+
     function shuffle(array) {
         const arr = array.slice();
         for (let i = arr.length - 1; i > 0; i--) {
@@ -47,7 +55,6 @@
         img.className = "card__img";
         img.alt = "";
         img.decoding = "async";
-        img.loading = "lazy";
         img.src = CARD_IMAGE_SRC[faceType];
         card.appendChild(img);
 
@@ -138,15 +145,38 @@
         return state.revealed.slice(-countInCycle);
     }
 
+    function appendRevealedGridCard(face, animate) {
+        const { wrap } = createCardElement(face.type);
+        if (animate) {
+            wrap.classList.add("pop-in");
+        }
+        revealedGrid.appendChild(wrap);
+    }
+
     function renderRevealedGrid(animateLast) {
-        revealedGrid.innerHTML = "";
         const cycleCards = getCurrentCycleRevealed();
-        cycleCards.forEach(function (face, index) {
-            const { wrap } = createCardElement(face.type);
-            if (animateLast && index === cycleCards.length - 1) {
-                wrap.classList.add("pop-in");
+        if (cycleCards.length === 0) {
+            revealedGrid.innerHTML = "";
+            return;
+        }
+
+        if (animateLast && cycleCards.length === 1) {
+            revealedGrid.innerHTML = "";
+            appendRevealedGridCard(cycleCards[0], true);
+            return;
+        }
+
+        if (animateLast && cycleCards.length > 1) {
+            const domCount = revealedGrid.childElementCount;
+            if (domCount === cycleCards.length - 1) {
+                appendRevealedGridCard(cycleCards[cycleCards.length - 1], true);
+                return;
             }
-            revealedGrid.appendChild(wrap);
+        }
+
+        revealedGrid.innerHTML = "";
+        cycleCards.forEach(function (face) {
+            appendRevealedGridCard(face, false);
         });
     }
 
@@ -180,7 +210,6 @@
         remainingEl.textContent = String(state.deck.length);
         pileEl.disabled = state.isDrawing;
         hintEl.textContent = "탭하여 뽑기";
-        mountDeckBack(pileEl);
         updateRevealedState();
     }
 
@@ -191,6 +220,7 @@
         currentCardEl.innerHTML = "";
         revealedGrid.innerHTML = "";
         historyStrip.innerHTML = "";
+        mountDeckBack(pileEl);
         updateUI();
     }
 
@@ -260,7 +290,7 @@
     initBtn.addEventListener("click", fullReset);
 
     setupInstallBanner();
-
+    preloadCardImages();
     fullReset();
 
     function isStandaloneMode() {

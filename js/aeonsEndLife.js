@@ -21,6 +21,8 @@
     const btnMinus = document.getElementById("btn-minus");
     const btnPlus = document.getElementById("btn-plus");
 
+    let saveTimer = null;
+
     function clamp(value) {
         return Math.max(0, Math.min(MAX_HP, value));
     }
@@ -55,14 +57,19 @@
     }
 
     function saveState() {
-        localStorage.setItem(
-            STORAGE_KEY,
-            JSON.stringify({
-                grave: state.grave,
-                neme: state.neme,
-                active: state.active,
-            })
-        );
+        if (saveTimer) {
+            clearTimeout(saveTimer);
+        }
+        saveTimer = setTimeout(function () {
+            localStorage.setItem(
+                STORAGE_KEY,
+                JSON.stringify({
+                    grave: state.grave,
+                    neme: state.neme,
+                    active: state.active,
+                })
+            );
+        }, 200);
     }
 
     function renderTrackerDigits(target) {
@@ -141,7 +148,9 @@
     });
 
     slider.addEventListener("input", function () {
-        setHp(Number(slider.value));
+        state[state.active] = clamp(Number(slider.value));
+        renderTrackerDigits(state.active);
+        saveState();
     });
 
     document.querySelectorAll(".life-quick__btn").forEach(function (btn) {

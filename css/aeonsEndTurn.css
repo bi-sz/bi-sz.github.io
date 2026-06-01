@@ -5,6 +5,7 @@
 }
 
 :root {
+    --font-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
     --stone-dark: #1a2228;
     --stone-mid: #2a3540;
     --stone-light: #3d4a56;
@@ -26,7 +27,7 @@ body {
     margin: 0;
     height: 100dvh;
     overflow: hidden;
-    font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+    font-family: var(--font-ui);
     background: radial-gradient(ellipse at 30% 20%, #1e3a42 0%, #0d1218 55%, #06090c 100%);
     color: #e8eef4;
 }
@@ -310,6 +311,7 @@ body {
 }
 
 .history-strip {
+    contain: layout style paint;
     display: flex;
     align-items: center;
     gap: 6px;
@@ -388,6 +390,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    content-visibility: auto;
     object-position: center;
     transform: scale(var(--img-scale, 1));
     filter: saturate(1.02) contrast(1.03);
@@ -415,7 +418,6 @@ body {
     color: rgba(245, 248, 252, 0.92);
     background: linear-gradient(180deg, rgba(10, 14, 18, 0.25), rgba(10, 14, 18, 0.55));
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(3px);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 }
 
@@ -452,6 +454,18 @@ body {
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .deck-pile.drawing .card.stack-top,
+    .current-card .card-wrap.pop-in,
+    .revealed-grid .card-wrap.pop-in {
+        animation: none;
+    }
+
+    .deck-pile .card {
+        transition: none;
     }
 }
 
@@ -596,7 +610,6 @@ body {
     background: rgba(18, 28, 36, 0.96);
     border: 1px solid rgba(126, 184, 204, 0.35);
     box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
-    backdrop-filter: blur(8px);
 }
 
 .install-banner[hidden] {
