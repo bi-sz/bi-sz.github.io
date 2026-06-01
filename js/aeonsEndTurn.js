@@ -129,6 +129,27 @@
         renderCurrentCard(last || null);
     }
 
+    /** 세로 그리드: 현재 덱 사이클(최대 6장)만 표시 */
+    function getCurrentCycleRevealed() {
+        if (state.revealed.length === 0) {
+            return [];
+        }
+        const countInCycle = state.revealed.length % DECK_SIZE || DECK_SIZE;
+        return state.revealed.slice(-countInCycle);
+    }
+
+    function renderRevealedGrid(animateLast) {
+        revealedGrid.innerHTML = "";
+        const cycleCards = getCurrentCycleRevealed();
+        cycleCards.forEach(function (face, index) {
+            const { wrap } = createCardElement(face.type);
+            if (animateLast && index === cycleCards.length - 1) {
+                wrap.classList.add("pop-in");
+            }
+            revealedGrid.appendChild(wrap);
+        });
+    }
+
     function appendHistoryDivider() {
         const divider = document.createElement("div");
         divider.className = "history-divider";
@@ -182,11 +203,7 @@
         state.deck = entry.deckSnapshot;
 
         removeLastHistoryEntry();
-
-        const lastGridCard = revealedGrid.lastElementChild;
-        if (lastGridCard) {
-            revealedGrid.removeChild(lastGridCard);
-        }
+        renderRevealedGrid(false);
 
         renderCurrentFromState();
         updateUI();
@@ -222,10 +239,7 @@
             });
 
             renderCurrentCard(face);
-
-            const { wrap } = createCardElement(face.type);
-            wrap.classList.add("pop-in");
-            revealedGrid.appendChild(wrap);
+            renderRevealedGrid(true);
 
             appendHistoryCard(face);
 
