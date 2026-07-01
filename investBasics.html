@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>투자의 기초 - 종류, 옵션, ETF, 우선주</title>
+
+<style>
+body{
+    font-family:'Pretendard','Noto Sans KR',sans-serif;
+    background:#f5f7fa;
+    margin:40px 20px;
+    line-height:1.8;
+    color:#333;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    color:#1b5fd1;
+    margin-bottom:8px;
+}
+
+.lead{
+    text-align:center;
+    color:#5a6a7a;
+    margin:0 0 32px;
+    font-size:1.05rem;
+}
+
+.part-title{
+    text-align:center;
+    margin:48px 0 24px;
+    padding:14px 20px;
+    background:linear-gradient(135deg,#1b5fd1 0%,#4d90fe 100%);
+    color:#fff;
+    border-radius:12px;
+    font-size:1.25rem;
+    font-weight:700;
+    letter-spacing:-0.02em;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    margin:25px 0;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+h2{
+    color:#1b5fd1;
+    border-left:6px solid #1b5fd1;
+    padding-left:10px;
+    margin-top:0;
+}
+
+h3{
+    color:#2a5aa8;
+    margin:20px 0 10px;
+    font-size:1.05rem;
+}
+
+.example{
+    background:#eef6ff;
+    border-left:5px solid #4d90fe;
+    padding:15px;
+    margin:15px 0;
+    border-radius:0 10px 10px 0;
+}
+
+.intro-box{
+    background:linear-gradient(180deg,#f8fbff 0%,#eef6ff 100%);
+    border:1px solid #c8ddf8;
+    border-radius:12px;
+    padding:20px 22px;
+    margin:16px 0;
+}
+
+.intro-box p{
+    margin:0 0 12px;
+}
+
+.intro-box p:last-child{
+    margin-bottom:0;
+}
+
+.chip-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:12px 0 0;
+    padding:0;
+    list-style:none;
+}
+
+.chip{
+    display:inline-block;
+    padding:6px 12px;
+    background:#eef6ff;
+    border:1px solid #c5d9f5;
+    border-radius:999px;
+    font-size:0.9rem;
+    color:#2a5aa8;
+}
+
+.good{
+    color:#1a8f4a;
+    font-weight:bold;
+}
+
+.bad{
+    color:#d93025;
+    font-weight:bold;
+}
+
+.table-wrap{
+    overflow-x:auto;
+    margin-top:15px;
+    border-radius:10px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:520px;
+}
+
+th,td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+    vertical-align:middle;
+}
+
+th{
+    background:#1b5fd1;
+    color:white;
+}
+
+td:first-child{
+    font-weight:600;
+    background:#f8fafc;
+}
+
+.summary{
+    background:#fff7d9;
+    padding:15px 18px;
+    border-radius:10px;
+    font-weight:bold;
+    line-height:1.9;
+}
+
+.two-col{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:16px;
+    margin:16px 0;
+}
+
+.mini-card{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+    padding:14px 16px;
+}
+
+.mini-card strong{
+    display:block;
+    color:#1b5fd1;
+    margin-bottom:8px;
+}
+
+.mini-card ul{
+    margin:0;
+    padding-left:18px;
+}
+
+.pros-cons{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px;
+    margin-top:12px;
+}
+
+.pros-cons div{
+    padding:12px 14px;
+    border-radius:10px;
+    font-size:0.95rem;
+}
+
+.pros{
+    background:#ecfdf3;
+    border:1px solid #a7f3d0;
+}
+
+.cons{
+    background:#fef2f2;
+    border:1px solid #fecaca;
+}
+
+.tree{
+    background:#1e293b;
+    color:#e2e8f0;
+    padding:20px 22px;
+    border-radius:12px;
+    font-family:Consolas,'Courier New',monospace;
+    font-size:0.88rem;
+    line-height:1.7;
+    overflow-x:auto;
+    white-space:pre;
+    margin:16px 0;
+}
+
+.closing-note{
+    background:#eef6ff;
+    border-radius:12px;
+    padding:18px 20px;
+    margin-top:16px;
+    border:1px solid #c5d9f5;
+}
+
+ul,ol{
+    padding-left:1.4em;
+}
+
+blockquote{
+    margin:10px 0;
+    padding:8px 14px;
+    background:#fff;
+    border-left:4px solid #94b8e8;
+    color:#444;
+}
+
+@media (max-width:600px){
+    body{margin:24px 14px;}
+    .card{padding:18px;}
+    h1{font-size:1.5rem;}
+    .part-title{font-size:1.1rem;}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📈 투자 기초 이해하기</h1>
+<p class="lead">투자 상품의 종류부터 옵션·우선주까지, 한 페이지로 정리합니다.</p>
+
+<p class="part-title">투자 상품 한눈에 보기</p>
+
+<div class="card">
+
+<h2>투자의 종류</h2>
+
+<div class="intro-box">
+<p>국채, 일반주식(하이닉스, 삼전), 우선주(삼성전자우, 현대차우), 코스피·코스닥 같은 <strong>지수</strong>, 그 지수를 추종하는 <strong>ETF</strong>, <strong>커버드콜</strong>, <strong>채권</strong>… 헷갈리기 쉽죠.</p>
+<p>크게 보면 <strong>투자 대상(무엇에 투자하는가)</strong> 기준으로 분류하는 게 이해하기 쉽습니다.</p>
+</div>
+
+<ul class="chip-list" aria-label="예시 키워드">
+<li class="chip">국채</li>
+<li class="chip">삼성전자 · SK하이닉스</li>
+<li class="chip">삼성전자우 · 현대차우</li>
+<li class="chip">KOSPI · KOSDAQ</li>
+<li class="chip">KODEX 200</li>
+<li class="chip">커버드콜 ETF</li>
+<li class="chip">회사채</li>
+</ul>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th>분류</th>
+<th>예시</th>
+<th>특징</th>
+</tr>
+<tr>
+<td>예금·적금</td>
+<td>은행 예금</td>
+<td>원금 안정성 높음, 수익률 낮음</td>
+</tr>
+<tr>
+<td>채권</td>
+<td>국채, 지방채, 회사채</td>
+<td>이자를 받는 투자</td>
+</tr>
+<tr>
+<td>주식</td>
+<td>삼성전자, SK하이닉스, 현대차</td>
+<td>기업의 지분 투자</td>
+</tr>
+<tr>
+<td>우선주</td>
+<td>삼성전자우, 현대차우</td>
+<td>의결권 대신 배당이 좋은 경우가 많음</td>
+</tr>
+<tr>
+<td>ETF</td>
+<td>KODEX 200, TIGER 미국S&amp;P500</td>
+<td>여러 자산을 묶어서 투자</td>
+</tr>
+<tr>
+<td>ETN</td>
+<td>증권사 발행 상품</td>
+<td>ETF와 비슷하지만 발행사 신용 위험 존재</td>
+</tr>
+<tr>
+<td>펀드</td>
+<td>액티브펀드, 인덱스펀드</td>
+<td>운용사가 대신 투자</td>
+</tr>
+<tr>
+<td>REITs</td>
+<td>리츠</td>
+<td>부동산에 간접 투자</td>
+</tr>
+<tr>
+<td>원자재</td>
+<td>금, 은, 구리, 원유</td>
+<td>실물 자산 투자</td>
+</tr>
+<tr>
+<td>외환</td>
+<td>달러, 엔화</td>
+<td>환율 변동에 투자</td>
+</tr>
+<tr>
+<td>가상자산</td>
+<td>비트코인, 이더리움</td>
+<td>변동성이 매우 큼</td>
+</tr>
+<tr>
+<td>파생상품</td>
+<td>선물, 옵션</td>
+<td>레버리지와 헤지 목적</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+<div class="card">
+<h2>1. 채권</h2>
+<p>채권도 여러 종류가 있습니다.</p>
+<ul>
+<li><strong>국채</strong> — 정부 발행</li>
+<li><strong>지방채</strong> — 지자체 발행</li>
+<li><strong>회사채</strong> — 기업 발행</li>
+<li><strong>금융채</strong> — 은행 등 금융기관 발행</li>
+<li><strong>해외채권</strong> — 미국 국채 등</li>
+</ul>
+<div class="example">채권은 쉽게 말해 <strong>돈을 빌려주고 이자를 받는 투자</strong>입니다.</div>
+</div>
+
+<div class="card">
+<h2>2. 주식</h2>
+<div class="two-col">
+<div class="mini-card">
+<strong>보통주</strong>
+<ul>
+<li>삼성전자</li>
+<li>SK하이닉스</li>
+<li>NAVER</li>
+</ul>
+</div>
+<div class="mini-card">
+<strong>우선주</strong>
+<ul>
+<li>삼성전자우</li>
+<li>현대차우</li>
+<li>LG생활건강우</li>
+</ul>
+</div>
+</div>
+<p>우선주는 보통 <strong>배당이 조금 더 좋고</strong>, 대신 <strong>의결권이 없는</strong> 경우가 많습니다.</p>
+</div>
+
+<div class="card">
+<h2>3. 지수 (Index)</h2>
+<p>지수는 투자 상품이 아니라 <strong>시장 성적표</strong>입니다.</p>
+<div class="two-col">
+<div class="mini-card">
+<strong>국내</strong>
+<ul>
+<li>KOSPI</li>
+<li>KOSDAQ</li>
+</ul>
+</div>
+<div class="mini-card">
+<strong>미국</strong>
+<ul>
+<li>S&amp;P 500</li>
+<li>NASDAQ 100</li>
+<li>Dow Jones</li>
+</ul>
+</div>
+<div class="mini-card">
+<strong>세계</strong>
+<ul>
+<li>MSCI World</li>
+<li>MSCI ACWI</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="card">
+<h2>4. ETF</h2>
+<p>ETF는 지수나 특정 자산을 따라가는 펀드입니다.</p>
+<h3>대표 예시</h3>
+<ul class="chip-list">
+<li class="chip">KODEX 200 → 코스피200 추종</li>
+<li class="chip">TIGER 미국 S&amp;P500</li>
+<li class="chip">TIGER 미국나스닥100</li>
+<li class="chip">KODEX 금선물</li>
+<li class="chip">KODEX 미국채10년</li>
+</ul>
+<p style="margin-top:18px;">ETF는 꼭 지수만 추종하는 것이 아닙니다.</p>
+<ul>
+<li>채권 ETF · 금 ETF · 원유 ETF</li>
+<li>반도체 ETF · AI ETF · 배당 ETF</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>5. 커버드콜 (Covered Call)</h2>
+<p>커버드콜은 <strong>전략</strong>입니다.</p>
+<div class="example">
+<strong>예시</strong><br>
+S&amp;P500 ETF를 보유 + 동시에 콜옵션을 매도<br>
+→ 옵션 프리미엄을 받아 <strong>배당처럼 월 분배금</strong>을 지급하는 구조
+</div>
+<h3>대표적인 커버드콜 ETF</h3>
+<ul>
+<li>PLUS 고배당주 커버드콜</li>
+<li>TIGER 미국S&amp;P500 커버드콜</li>
+<li>미국의 일부 고배당 커버드콜 ETF</li>
+</ul>
+<div class="pros-cons">
+<div class="pros"><strong>장점</strong><br>높은 분배금</div>
+<div class="cons"><strong>단점</strong><br>주가 상승을 일부 포기</div>
+</div>
+</div>
+
+<div class="card">
+<h2>6. 레버리지 · 인버스</h2>
+<p>ETF 안에서도 종류가 있습니다.</p>
+<ul>
+<li><strong>일반 ETF</strong></li>
+<li><strong>레버리지 ETF</strong> — 2배 추종</li>
+<li><strong>인버스 ETF</strong> — 반대로 움직임</li>
+<li><strong>곱버스</strong> — 2배 인버스</li>
+</ul>
+<p>단기 투자용으로 많이 사용됩니다.</p>
+</div>
+
+<div class="card">
+<h2>7. 배당형</h2>
+<p>배당에 집중한 투자입니다.</p>
+<ul class="chip-list">
+<li class="chip">배당주</li>
+<li class="chip">고배당 ETF</li>
+<li class="chip">월배당 ETF</li>
+<li class="chip">커버드콜 ETF</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>8. 원자재</h2>
+<ul class="chip-list">
+<li class="chip">금</li>
+<li class="chip">은</li>
+<li class="chip">구리</li>
+<li class="chip">원유</li>
+<li class="chip">천연가스</li>
+</ul>
+<p>직접 투자하거나 ETF로 투자할 수 있습니다.</p>
+</div>
+
+<div class="card">
+<h2>9. 리츠 (REITs)</h2>
+<p>부동산에 직접 투자하지 않고 임대수익을 배당받는 구조입니다.</p>
+<ul>
+<li>오피스 · 물류센터 · 호텔 · 쇼핑몰 등</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>10. 가상자산</h2>
+<ul class="chip-list">
+<li class="chip">비트코인</li>
+<li class="chip">이더리움</li>
+<li class="chip">솔라나</li>
+</ul>
+<p>블록체인 기반 자산에 투자하는 방식입니다. 변동성이 매우 큽니다.</p>
+</div>
+
+<div class="card">
+<h2>투자 상품 간 관계</h2>
+<div class="tree">투자
+├─ 예금·적금
+│
+├─ 채권
+│   ├─ 국채
+│   ├─ 회사채
+│   └─ 금융채
+│
+├─ 주식
+│   ├─ 보통주
+│   └─ 우선주
+│
+├─ 지수 (시장 성적표)
+│   ├─ KOSPI
+│   ├─ KOSDAQ
+│   ├─ S&amp;P500
+│   └─ NASDAQ100
+│
+├─ ETF
+│   ├─ 지수 ETF
+│   ├─ 채권 ETF
+│   ├─ 원자재 ETF
+│   ├─ 배당 ETF
+│   ├─ 커버드콜 ETF
+│   ├─ 레버리지 ETF
+│   └─ 인버스 ETF
+│
+├─ 펀드
+├─ 리츠 (REITs)
+├─ 원자재
+├─ 외환
+└─ 가상자산</div>
+<div class="closing-note">
+<strong>정리하면</strong> — 국채와 채권은 같은 큰 분류(채권)이고, 코스피·코스닥은 <strong>지수</strong>, 그 지수를 추종하는 ETF는 <strong>투자상품</strong>, 커버드콜은 ETF 등에 적용되는 <strong>운용 전략</strong>이라고 이해하면 가장 깔끔합니다.
+</div>
+</div>
+
+<p class="part-title">핵심 개념 이해하기</p>
+
+<div class="card">
+
+<h2>1. 옵션 (Option)이란?</h2>
+
+<p>
+옵션은 <strong>"미래에 살 수 있는 권리"</strong> 또는
+<strong>"팔 수 있는 권리"</strong>를 사고파는 계약입니다.
+</p>
+
+<div class="example">
+
+현재 삼성전자 가격 : <b>100,000원</b>
+
+<br><br>
+
+A는 생각합니다.
+
+<blockquote>
+"한 달 뒤에는 130,000원이 될 것 같아."
+</blockquote>
+
+하지만 지금 돈이 없습니다.
+
+그래서
+
+<blockquote>
+"한 달 안에 100,000원에 살 수 있는 권리를 팔아주세요."
+</blockquote>
+
+B는
+
+<blockquote>
+"좋아요. 대신 권리 사용료 5,000원을 주세요."
+</blockquote>
+
+이 5,000원이 바로 <b>프리미엄 (Premium)</b>입니다.
+
+</div>
+
+<h3>결과</h3>
+
+<ul>
+<li>주가가 130,000원 → 100,000원에 구매 가능 → <span class="good">이익</span></li>
+<li>주가가 90,000원 → 그냥 안 사면 됨 → <span class="bad">손실은 프리미엄 5,000원</span></li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>2. 프리미엄 (Premium)이란?</h2>
+
+<p>옵션을 사기 위해 먼저 내는 <strong>권리 사용료</strong>입니다.</p>
+
+<div class="example">
+영화 예매 수수료처럼<br>
+권리를 사용하지 않아도 <strong>프리미엄은 돌려받지 못합니다.</strong>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>3. 의결권이란?</h2>
+
+<p>의결권은 회사의 중요한 일을 투표할 수 있는 권리입니다.</p>
+
+<p>예를 들어</p>
+<ul>
+<li>대표이사를 선임</li>
+<li>배당금 결정</li>
+<li>회사 합병</li>
+<li>사업 방향 변경</li>
+</ul>
+
+<div class="example">
+주주총회<br><br>
+대표이사를 연임할까요?<br>
+☑ 찬성<br>
+☐ 반대
+</div>
+
+<p>주식을 많이 가진 사람일수록 더 많은 표를 갖습니다.</p>
+
+</div>
+
+<div class="card">
+
+<h2>4. 보통주와 우선주의 차이</h2>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th></th>
+<th>보통주</th>
+<th>우선주</th>
+</tr>
+<tr>
+<td>의결권</td>
+<td>O</td>
+<td>X</td>
+</tr>
+<tr>
+<td>배당</td>
+<td>보통</td>
+<td>조금 더 많을 수 있음</td>
+</tr>
+<tr>
+<td>거래량</td>
+<td>많음</td>
+<td>적은 편</td>
+</tr>
+<tr>
+<td>청산 시</td>
+<td>나중</td>
+<td>보통주보다 우선</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>5. 옵션 vs 선물 vs 공매도</h2>
+
+<div class="table-wrap">
+<table>
+<tr>
+<th></th>
+<th>옵션</th>
+<th>선물</th>
+<th>공매도</th>
+</tr>
+<tr>
+<td>무엇인가?</td>
+<td>권리</td>
+<td>의무 계약</td>
+<td>주식을 빌려 먼저 판매</td>
+</tr>
+<tr>
+<td>반드시 거래?</td>
+<td>아니오</td>
+<td>예</td>
+<td>반드시 갚아야 함</td>
+</tr>
+<tr>
+<td>손실</td>
+<td>프리미엄</td>
+<td>매우 큼</td>
+<td>이론상 무한대</td>
+</tr>
+</table>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>6. 쉽게 기억하기</h2>
+
+<div class="summary">
+✔ 옵션 = "살 수도 있고 안 살 수도 있는 권리"<br><br>
+✔ 선물 = "반드시 거래해야 하는 계약"<br><br>
+✔ 공매도 = "남의 주식을 빌려 먼저 파는 것"<br><br>
+✔ 프리미엄 = "권리 사용료"<br><br>
+✔ 의결권 = "회사의 중요한 일에 투표하는 권리"
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
